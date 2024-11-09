@@ -157,3 +157,10 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:8000/api",    
     "http://127.0.0.1:8000",
 ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')  #<-- added, this is where the static files will be stored
+
+#try to fix issues with this
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': []
+}
