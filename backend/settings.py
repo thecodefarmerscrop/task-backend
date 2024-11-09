@@ -143,11 +143,13 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-""" CORS_ALLOWED_ORIGINS = [
+CORS_ALLOWED_ORIGINS = [
 "http://localhost:3000"
 ]
- """
+
 #Added but not Documented-------------------------------------------
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')  #<-- added, this is where the static files will be stored
 
 #CORS_ALLOW_ALL_ORIGINS = True   #<-- added, but this will allow all websites to make requests(only good for dev)
 
@@ -155,12 +157,13 @@ CSRF_TRUSTED_ORIGINS = [
     "https://crimetea.com",
     "https://*.crimetea.com",
     "https://task-api.crimetea.com",
+    "https://task-api.crimetea.com/api/tasks",
+    "http://task-api.crimetea.com",
     "http://127.0.0.1:8000/api/tasks",
     "http://127.0.0.1:8000/api",    
     "http://127.0.0.1:8000",
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')  #<-- added, this is where the static files will be stored
 
 #try to fix issues with this
 """ REST_FRAMEWORK = {
