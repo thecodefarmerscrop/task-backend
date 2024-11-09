@@ -158,7 +158,7 @@ CORS_ALLOWED_ORIGINS = [
 
 #Added but not Documented-------------------------------------------
 
-CORS_ALLOW_ALL_ORIGINS = True   #<-- added, but this will allow all websites to make requests(only good for dev)
+#CORS_ALLOW_ALL_ORIGINS = True   #<-- added, but this will allow all websites to make requests(only good for dev)
 
 """ CSRF_TRUSTED_ORIGINS = [
     "https://crimetea.com",
