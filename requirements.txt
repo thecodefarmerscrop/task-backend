@@ -4,3 +4,4 @@ django-cors-headers
 python-dotenv
 pymysql
 gunicorn==20.1.0
+whitenoise==6.2.0 #<-- Will solve "MIME type" error when hosted CSS is loaded
