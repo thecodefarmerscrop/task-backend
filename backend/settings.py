@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-g)p@9uy^ca6r86f8jc_ss4*^s+klz8o(j=es4-9xlzrivadtp%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -149,7 +149,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
  """
 #Added but not Documented-------------------------------------------
 
-CORS_ALLOW_ALL_ORIGINS = True   #<-- added, but this will allow all websites to make requests(only good for dev)
+#CORS_ALLOW_ALL_ORIGINS = True   #<-- added, but this will allow all websites to make requests(only good for dev)
 
 CSRF_TRUSTED_ORIGINS = [
     "https://crimetea.com",
@@ -163,9 +163,9 @@ CSRF_TRUSTED_ORIGINS = [
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')  #<-- added, this is where the static files will be stored
 
 #try to fix issues with this
-REST_FRAMEWORK = {
+""" REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': []
-}
+} """
 
-import mimetypes
-mimetypes.add_type("text/css", ".css", True)
+""" import mimetypes
+mimetypes.add_type("text/css", ".css", True) """
