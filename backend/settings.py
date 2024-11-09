@@ -164,3 +164,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')  #<-- added, this is where the s
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': []
 }
+
+import mimetypes
+mimetypes.add_type("text/css", ".css", True)
