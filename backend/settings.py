@@ -144,7 +144,8 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-"http://localhost:3000"
+"http://localhost:3000",
+"https://task-api.crimetea.com/api/tasks",
 ]
 
 #Added but not Documented-------------------------------------------
@@ -153,7 +154,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')  #<-- added, this is where the s
 
 #CORS_ALLOW_ALL_ORIGINS = True   #<-- added, but this will allow all websites to make requests(only good for dev)
 
-CSRF_TRUSTED_ORIGINS = [
+""" CSRF_TRUSTED_ORIGINS = [
     "https://crimetea.com",
     "https://*.crimetea.com",
     "https://task-api.crimetea.com",
@@ -162,7 +163,7 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:8000/api/tasks",
     "http://127.0.0.1:8000/api",    
     "http://127.0.0.1:8000",
-]
+] """
 
 
 #try to fix issues with this
