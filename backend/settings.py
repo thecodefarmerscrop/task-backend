@@ -147,6 +147,8 @@ CORS_ALLOWED_ORIGINS = [
 #"http://localhost:3000",
 "https://task-api.crimetea.com",
 "https://tasklist.crimetea.com",
+"https://*.crimetea.com",
+"https://task-api.crimetea.com/api/tasks/",
 ]
 
 #Added but not Documented-------------------------------------------
