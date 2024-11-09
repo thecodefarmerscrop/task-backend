@@ -163,9 +163,9 @@ CSRF_TRUSTED_ORIGINS = [
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')  #<-- added, this is where the static files will be stored
 
 #try to fix issues with this
-""" REST_FRAMEWORK = {
+REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': []
-} """
+}
 
-""" import mimetypes
-mimetypes.add_type("text/css", ".css", True) """
+import mimetypes
+mimetypes.add_type("text/css", ".css", True)
