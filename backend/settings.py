@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-g)p@9uy^ca6r86f8jc_ss4*^s+klz8o(j=es4-9xlzrivadtp%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -151,14 +151,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #CORS_ALLOW_ALL_ORIGINS = True   #<-- added, but this will allow all websites to make requests(only good for dev)
 
-CSRF_TRUSTED_ORIGINS = [
+""" CSRF_TRUSTED_ORIGINS = [
     "https://crimetea.com",
     "https://*.crimetea.com",
     "https://task-api.crimetea.com",
     "http://127.0.0.1:8000/api/tasks",
     "http://127.0.0.1:8000/api",    
     "http://127.0.0.1:8000",
-]
+] """
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')  #<-- added, this is where the static files will be stored
 
