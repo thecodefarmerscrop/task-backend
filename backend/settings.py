@@ -146,6 +146,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
 #"http://localhost:3000",
 "https://task-api.crimetea.com",
+"https://tasklist.crimetea.com",
 ]
 
 #Added but not Documented-------------------------------------------
