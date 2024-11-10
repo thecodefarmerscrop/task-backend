@@ -143,24 +143,18 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-""" CORS_ALLOWED_ORIGINS = [
-"http://localhost:3000",
-"https://crimetea.com",
-"https://*.crimetea.com",
+#CORS_ALLOW_ALL_ORIGINS = True   #<-- added, but this will allow all websites to make requests(only good for dev)
+
+CORS_ALLOWED_ORIGINS = [
+"http://localhost:3000", #<-- added, allows react app to run (LOCALLY)
 "https://task-api.crimetea.com",
-"http://127.0.0.1:8000/api/tasks",
-"http://127.0.0.1:8000/api",    
-"http://127.0.0.1:8000",
-"https://task-api.crimetea.com",
-"https://tasklist.crimetea.com",
 "https://task-api.crimetea.com/api/tasks/",
-] """
+]
 
 #Added but not Documented-------------------------------------------
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')  #<-- added, this is where the static files will be stored
 
-CORS_ALLOW_ALL_ORIGINS = True   #<-- added, but this will allow all websites to make requests(only good for dev)
 
 """ CSRF_TRUSTED_ORIGINS = [
     "https://crimetea.com",
