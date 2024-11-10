@@ -148,7 +148,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
 "http://localhost:3000", #<-- added, allows react app to run (LOCALLY)
 "https://task-api.crimetea.com",
-"https://task-api.crimetea.com/api/tasks/",
 ]
 
 #Added but not Documented-------------------------------------------
