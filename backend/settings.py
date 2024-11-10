@@ -146,8 +146,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #CORS_ALLOW_ALL_ORIGINS = True   #<-- added, but this will allow all websites to make requests(only good for dev)
 
 CORS_ALLOWED_ORIGINS = [
-"http://localhost:3000", #<-- added, allows react app to run (LOCALLY)
-"https://task-api.crimetea.com/*", #<-- added, allows react app to run (PRODUCTION)
+#"http://localhost:3000", #<-- added, allows react app to run (LOCALLY)
+"https://task-api.crimetea.com", #<-- added, allows react app to run (PRODUCTION)
+"https://tasklist.crimetea.com",
 ]
 
 #Added but not Documented-------------------------------------------
