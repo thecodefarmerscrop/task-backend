@@ -143,7 +143,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOWED_ORIGINS = [
+""" CORS_ALLOWED_ORIGINS = [
 "http://localhost:3000",
 "https://crimetea.com",
 "https://*.crimetea.com",
@@ -154,11 +154,13 @@ CORS_ALLOWED_ORIGINS = [
 "https://task-api.crimetea.com",
 "https://tasklist.crimetea.com",
 "https://task-api.crimetea.com/api/tasks/",
-]
+] """
 
 #Added but not Documented-------------------------------------------
 
-#CORS_ALLOW_ALL_ORIGINS = True   #<-- added, but this will allow all websites to make requests(only good for dev)
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')  #<-- added, this is where the static files will be stored
+
+CORS_ALLOW_ALL_ORIGINS = True   #<-- added, but this will allow all websites to make requests(only good for dev)
 
 """ CSRF_TRUSTED_ORIGINS = [
     "https://crimetea.com",
@@ -172,12 +174,3 @@ CORS_ALLOWED_ORIGINS = [
     "https://task-api.crimetea.com/api/tasks/",
 ] """
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')  #<-- added, this is where the static files will be stored
-
-#try to fix issues with this
-""" REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': []
-} """
-
-""" import mimetypes
-mimetypes.add_type("text/css", ".css", True) """
