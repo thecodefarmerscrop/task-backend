@@ -37,20 +37,20 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    'whitenoise.runserver_nostatic',   #<-- NEEDED FOR EC2 HOSTING
+    'whitenoise.runserver_nostatic',  #<-- Needed for hosting
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tasks',
     'rest_framework',
-    'corsheaders',
+    'corsheaders',   #<-- Needed for hosting
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware', 
+    'corsheaders.middleware.CorsMiddleware',   #<-- Needed for hosting (Needs to be at the top)
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',   #<-- NEEDED FOR EC2 HOSTING
+    'whitenoise.middleware.WhiteNoiseMiddleware',   #<-- Needed for hosting
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
