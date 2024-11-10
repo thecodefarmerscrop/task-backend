@@ -29,9 +29,7 @@ SECRET_KEY = 'django-insecure-g)p@9uy^ca6r86f8jc_ss4*^s+klz8o(j=es4-9xlzrivadtp%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["task-api.crimetea.com"]  #<-- added, this is the domain for the django rest api
-#ALLOWED_HOSTS = ["*"]
-
+ALLOWED_HOSTS = ["task-api.crimetea.com"]  #<-- added, this is the host domain for the django rest api (PRODUCTION)
 
 # Application definition
 
@@ -138,36 +136,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')  #<-- added, this is where the static files will be stored (PRODUCTION)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#CORS_ALLOW_ALL_ORIGINS = True   #<-- added, but this will allow all websites to make requests(only good for dev)
-
 CORS_ALLOWED_ORIGINS = [
-#"http://localhost:3000", #<-- added, allows react app to run (LOCALLY)
-#"https://task-api.crimetea.com", #<-- added, allows react app to run (PRODUCTION)
-"https://tasklist.crimetea.com", #<-- added, allows react app to run (PRODUCTION)
+#"http://localhost:3000", #<-- added, allows our React Frontend localhost to make requests to this Django Rest API (LOCAL DEVELOPMENT)
+"https://tasklist.crimetea.com", #<-- added, allows our React Frontend Domain to make requests to this Django Rest API (PRODUCTION)
 ]
-
-#Added but not Documented-------------------------------------------
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')  #<-- added, this is where the static files will be stored
-
-
-""" CSRF_TRUSTED_ORIGINS = [
-    "https://crimetea.com",
-    "https://*.crimetea.com",
-    "https://task-api.crimetea.com",
-    "http://127.0.0.1:8000/api/tasks",
-    "http://127.0.0.1:8000/api",    
-    "http://127.0.0.1:8000",
-    "https://task-api.crimetea.com",
-    "https://tasklist.crimetea.com",
-    "https://task-api.crimetea.com/api/tasks/",
-] """
-
-
-#Access-Control-Allow-Origin: https://tasklist.crimetea.com
