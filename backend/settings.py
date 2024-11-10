@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-g)p@9uy^ca6r86f8jc_ss4*^s+klz8o(j=es4-9xlzrivadtp%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["task-api.crimetea.com"]
+ALLOWED_HOSTS = ["task-api.crimetea.com"]  #<-- added, this is the domain for the django rest api
 #ALLOWED_HOSTS = ["*"]
 
 
@@ -149,7 +149,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
 #"http://localhost:3000", #<-- added, allows react app to run (LOCALLY)
 #"https://task-api.crimetea.com", #<-- added, allows react app to run (PRODUCTION)
-"https://tasklist.crimetea.com",
+"https://tasklist.crimetea.com", #<-- added, allows react app to run (PRODUCTION)
 ]
 
 #Added but not Documented-------------------------------------------
