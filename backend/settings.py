@@ -144,6 +144,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')  #<-- added, this is where the s
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-#"http://localhost:3000", #<-- added, allows our React Frontend localhost to make requests to this Django Rest API (LOCAL DEVELOPMENT)
+"http://localhost:3000", #<-- added, allows our React Frontend localhost to make requests to this Django Rest API (LOCAL DEVELOPMENT)
 "https://tasklist.crimetea.com", #<-- added, allows our React Frontend Domain to make requests to this Django Rest API (PRODUCTION)
 ]
