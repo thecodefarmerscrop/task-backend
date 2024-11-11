@@ -29,7 +29,10 @@ SECRET_KEY = 'django-insecure-g)p@9uy^ca6r86f8jc_ss4*^s+klz8o(j=es4-9xlzrivadtp%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["task-api.crimetea.com"]  #<-- added, this is the host domain for the django rest api (PRODUCTION)
+ALLOWED_HOSTS = [
+    "task-api.crimetea.com",  #<-- added, this is the host domain for the django rest api (PRODUCTION)
+    "http://localhost:3000"
+    ]
 
 # Application definition
 
