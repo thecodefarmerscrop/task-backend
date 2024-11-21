@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tasks',
     'rest_framework',
-    'corsheaders',
     'whitenoise.runserver_nostatic',   #<-- Needed for hosting
 	'corsheaders',   #<-- Needed for hosting
 ]
