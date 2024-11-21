@@ -56,7 +56,6 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',   #<-- Needed for hosting (Needs to be at the top)
     'whitenoise.middleware.WhiteNoiseMiddleware',   #<-- Needed for hosting
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
