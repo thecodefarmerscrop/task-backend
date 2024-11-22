@@ -31,11 +31,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$fii$u-f)c-i8f!igjddqkw!i$_$j7h4=+ly1jh0(8&!m39o*1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = [
-    "task-api.thecodefarmer.com" #This is the host domain for the django rest api (PRODUCTION)
-]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -49,13 +47,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tasks',
     'rest_framework',
-    'whitenoise.runserver_nostatic',   #<-- Needed for hosting
-	'corsheaders',   #<-- Needed for hosting
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',   #<-- Needed for hosting (Needs to be at the top)
-    'whitenoise.middleware.WhiteNoiseMiddleware',   #<-- Needed for hosting
+    'corsheaders.middleware.CorsMiddleware', #Needs to be at the top of the middleware list.
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -146,7 +142,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/') #This is where the static files will be stored (PRODUCTION)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -154,6 +149,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/') #This is where the static files 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-#"http://localhost:3000" #Allows React Frontend localhost to make requests to Django Rest API (LOCAL DEVELOPMENT)
-"https://tasklist.thecodefarmer.com", #Allows React Frontend Domain to make requests to Django Rest API (PRODUCTION)
+"http://localhost:3000"
 ]
